@@ -1,0 +1,19 @@
+1. Import the given “Salaries.csv” file as dataframe using pandas and perform the
+following:
+a) Find the number of attributes and samples in the given dataset
+b) Select and display the following
+ All rows of first four attributes
+ First 5 attributes and all samples
+ 11 to 15 samples from attribute-4 and attribute-8
+ 10 sample and 5 th attribute
+c) Extract attribute 4 and 5 and create a new array
+d) Give the summary of the Salaries dataset using any statistical / aggregation
+functions
+e) Which job has the maximum Salary?
+f) What is the average of the remote ratio?
+g) How many unique jobs are available?
+h) Which company location has the minimum salary in USD?
+i) How many members employment type is PT?
+j) How many different categories of company size you can find in the dataset?
+2. Identify suitable attributes and plot using any 4 charts (Bar, Pie, Histogram, Scatter,
+Line, violin)
