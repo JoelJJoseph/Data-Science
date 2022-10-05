@@ -1,0 +1,17 @@
+Import the given “Salaries.csv” file using pandas and perform the following using NumPy.
+a) Create structured array of Salaries
+b) Find the structure of the array created
+c) Find the number of attributes and samples in the given dataset
+d) Select and display the following
+a. All rows of first four attributes
+b. First 5 attributes and all samples
+c. 11 to 15 samples from attribute-4 and attribute-8
+d. 10 sample and 5 th attribute
+e) Extract attribute 4 and 5 and create a new array
+f) Give the summary of the Salaries dataset using any statistical / aggregation functions
+g) Which job has the maximum Salary?
+h) What is the average of the remote ratio?
+i) How many unique jobs are available?
+j) Which company location has the minimum salary in USD?
+k) How many members employment type is PT?
+l) How many different categories of company size you can find in the dataset?
