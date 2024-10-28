@@ -1,0 +1,84 @@
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.linear_model import LinearRegression
+from sklearn.model_selection import train_test_split
+
+# Sample data
+X = np.array([1, 2, 3, 4, 5]).reshape(-1, 1)  # Input feature (reshaped to 2D array)
+y = np.array([2, 4, 5, 4, 5])  # Target variable
+
+# Split the data into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Create and fit the linear regression model
+model = LinearRegression()
+model.fit(X_train, y_train)
+
+# Make predictions on test data
+y_pred = model.predict(X_test)
+
+# Print coefficients and intercept
+print("Coefficient: ", model.coef_[0])
+print("Intercept: ", model.intercept_)
+
+# Plot the data and the regression line
+plt.scatter(X, y, color='blue')
+plt.plot(X_test, y_pred, color='red', linewidth=2)
+plt.xlabel("X")
+plt.ylabel("y")
+plt.title("Linear Regression")
+plt.show()
+
+
+
+
+
+
+
+
+
+
+
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.linear_model import LinearRegression
+from sklearn.model_selection import train_test_split
+
+# Sample data with two features
+X = np.array([[1, 2], [2, 3], [3, 4], [4, 5], [5, 6]])
+y = np.array([3, 4, 2, 6, 5])  # Target variable
+
+# Split the data into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Create and fit the linear regression model
+model = LinearRegression()
+model.fit(X_train, y_train)
+
+# Make predictions on test data
+y_pred = model.predict(X_test)
+
+# Print coefficients and intercept
+print("Coefficients: ", model.coef_)
+print("Intercept: ", model.intercept_)
+
+# Plot the data and the regression plane
+fig = plt.figure()
+ax = fig.add_subplot(111, projection='3d')
+ax.scatter(X[:, 0], X[:, 1], y, c='blue', marker='o')
+ax.set_xlabel('X1')
+ax.set_ylabel('X2')
+ax.set_zlabel('y')
+
+# Create a meshgrid to plot the regression plane
+x1_range = np.linspace(min(X[:, 0]), max(X[:, 0]), 10)
+x2_range = np.linspace(min(X[:, 1]), max(X[:, 1]), 10)
+X1, X2 = np.meshgrid(x1_range, x2_range)
+Y = model.coef_[0] * X1 + model.coef_[1] * X2 + model.intercept_
+ax.plot_surface(X1, X2, Y, alpha=0.5)
+
+plt.title("Multi-Linear Regression")
+plt.show()
+
+
+
